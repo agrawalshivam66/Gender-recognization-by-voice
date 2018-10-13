@@ -57,7 +57,11 @@ clf = RandomForestClassifier()
 clf.fit(X_train, y_train) 
 print(clf.score(X_test, y_test))
 
-
+# svm accuracy 0.982
+from sklearn import svm
+clf = svm.SVC(kernel='rbf', C=1)
+clf.fit(X_train, y_train)
+print(clf.score(X_test, y_test))
 
 # Predicting the Test set results
 y_pred = classifier.predict(X_test)
